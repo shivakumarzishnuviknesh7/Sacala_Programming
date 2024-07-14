@@ -1,6 +1,6 @@
 val x = 12
-val c1 : Int = (x * 9 )/5 +32
-print(c1)
+val c2 : Int = (x * 9 )/5 +32
+print(c2)
 val c1 : Int = (1 + 2) * 3
 
 val x1 = 12
@@ -85,6 +85,26 @@ def or(a: Boolean, b: Boolean ) = (a,b)match{
 or(true,true)
 or(false,false)
 
+def min(a: Int, b: Int) = {
+  if (a < b) a else b
+}
+def max(a: Int, b: Int) = {
+  if (a > b) a else b
+}
+def minmax(a: Int, b: Int, c: Int, d: Int) = {
+  val minNumber = min(a, min(b, min(c, d)))
+  val maxNumber = max(a, max(b, max(c, d)))
+  (minNumber, maxNumber)
+}
+minmax(1, 2, 3, 4)
+minmax(2, 1, 4, 3)
 
 
-
+def firstChars(a: String, b: String, c: String, d: String) = {
+  val a1 = if (a.isEmpty) "" else a.charAt(0).toString
+  val b1 = if (b.isEmpty) "" else b.charAt(0).toString
+  val c1 = if (c.isEmpty) "" else c.charAt(0).toString
+  val d1 = if (d.isEmpty) "" else d.charAt(0).toString
+  s"$a1$b1$c1$d1"
+}
+firstChars("ab", "cd", "", "ed")
